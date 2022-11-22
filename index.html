@@ -6,35 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="style.css" />
     <title>Meditation App</title>
 </head>
 
 <body>
-    <div class="app">
-        <div>
-            <button>2 Minutes</button>
-            <button>5 Minutes</button>
-            <button>10 Minutes</button>
+    <main class="main">
+        <div class="time">
+            <button class="time__btn">2 Minutes</button>
+            <button class="time__btn">5 Minutes</button>
+            <button class="time__btn">10 Minutes</button>
         </div>
-        <div>
+        <div class="counter-section">
             <audio>
-                <source/>
-              </audio>
-            <img></img>
+                <source src="./sounds/beach.mp3" type="audio" />
+            </audio>
+            <img class="counter-section__circle"><svg width="453" height="453" viewBox="0 0 453 453" fill="none"
+                stroke="white" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20" />
+            </svg>
+            </img>
             <svg>
-                <circle/>
-                </svg>
+                <circle />
+            </svg>
             <svg>
-                <circle/>
-                </svg>
+                <circle />
+            </svg>
             <h3>0:00</h3>
         </div>
         <div>
         </div>
-    </div>
+    </main>
 
-    <script src=""></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

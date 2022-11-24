@@ -64,6 +64,14 @@
   cursor: pointer;
 }
 
+.main .counter-section .counter-section__controls:active .counter-section__controls--play svg path {
+  fill: lightgray;
+}
+
+.main .counter-section .counter-section__controls:active .counter-section__controls--pause svg rect {
+  fill: lightgray;
+}
+
 .main .counter-section .counter-section__controls .counter-section__controls--play {
   position: absolute;
 }
@@ -72,7 +80,7 @@
   position: absolute;
 }
 
-.main .counter-section .counter-section__timer-numbers {
+.main .counter-section .counter-section__countdown-numbers {
   position: relative;
   top: 30%;
   color: white;

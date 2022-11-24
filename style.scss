@@ -57,6 +57,14 @@ $primary-color: white;
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      &:active {
+        .counter-section__controls--play svg path {
+          fill: lightgray;
+        }
+        .counter-section__controls--pause svg rect {
+          fill: lightgray;
+        }
+      }
       .counter-section__controls--play {
         position: absolute;
       }
@@ -64,7 +72,7 @@ $primary-color: white;
         position: absolute;
       }
     }
-    .counter-section__timer-numbers {
+    .counter-section__countdown-numbers {
       position: relative;
       top: 30%;
       color: $primary-color;

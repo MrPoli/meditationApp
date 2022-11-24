@@ -29,6 +29,13 @@
   background-color: transparent;
   color: white;
   font-size: 20px;
+  transition: 0.2s;
+}
+
+.main .time .time__btn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
 .main .counter-section {
@@ -40,6 +47,38 @@
   align-items: center;
 }
 
-svg circle {
+.main .counter-section .counter-section--circle {
+  position: absolute;
+}
+
+.main .counter-section .counter-section--circle .counter-section--circle__svg circle {
   stroke: white;
+  width: 300px;
+}
+
+.main .counter-section .counter-section__controls {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main .counter-section .counter-section__controls .counter-section__controls--play {
+  position: absolute;
+}
+
+.main .counter-section .counter-section__controls .counter-section__controls--pause {
+  position: absolute;
+}
+
+.main .counter-section .counter-section__timer-numbers {
+  position: relative;
+  top: 30%;
+  color: white;
+  font-size: 48px;
+}
+
+.main .hidden {
+  visibility: hidden;
 }

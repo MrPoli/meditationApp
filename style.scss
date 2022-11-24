@@ -27,6 +27,12 @@ $primary-color: white;
       background-color: transparent;
       color: $primary-color;
       font-size: 20px;
+      transition: 0.2s;
+      &:hover {
+        background-color: $primary-color;
+        color: black;
+        cursor: pointer;
+      }
     }
   }
   .counter-section {
@@ -36,11 +42,36 @@ $primary-color: white;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .counter-section__circle {
+    .counter-section--circle {
+      position: absolute;
+      .counter-section--circle__svg {
+        circle {
+          stroke: white;
+          width: 300px;
+        }
+      }
+    }
+    .counter-section__controls {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .counter-section__controls--play {
+        position: absolute;
+      }
+      .counter-section__controls--pause {
+        position: absolute;
+      }
+    }
+    .counter-section__timer-numbers {
+      position: relative;
+      top: 30%;
+      color: $primary-color;
+      font-size: 48px;
     }
   }
-}
-
-svg circle {
-  stroke: white;
+  .hidden {
+    visibility: hidden;
+  }
 }

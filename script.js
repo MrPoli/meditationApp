@@ -13,9 +13,12 @@ let countdownNumbers = document.querySelector(
   ".counter-section__countdown-numbers"
 );
 let countdownTime = 0;
+let countdownInterval;
 
-function togglePlay() {
-  return audio.paused ? audio.play() : audio.pause();
+function countdownIntervalStart() {
+  countdownTime == 0
+    ? clearInterval(countdownInterval)
+    : (countdownInterval = setInterval(countdown, 1000));
 }
 
 twoMinutesBtn.addEventListener("click", () => {
@@ -31,11 +34,20 @@ tenMinutesBtn.addEventListener("click", () => {
   countdownTime = parseInt(countdownNumbers.textContent) * 60;
 });
 
-counterSection.addEventListener("click", () => {
-  togglePlay();
+counterSectionPlay.addEventListener("click", () => {
+  countdownTime == 0 ? audio.pause() : audio.play();
+  if (audio.played) {
+    counterSectionPlay.classList.toggle("hidden");
+    counterSectionPause.classList.toggle("hidden");
+  }
+  countdownIntervalStart();
+});
+
+counterSectionPause.addEventListener("click", () => {
+  audio.pause();
   counterSectionPlay.classList.toggle("hidden");
   counterSectionPause.classList.toggle("hidden");
-  setInterval(countdown, 1000);
+  clearInterval(countdownInterval);
 });
 
 let countdown = () => {

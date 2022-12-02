@@ -7,11 +7,10 @@
   display: flex;
   height: 100vh;
   width: 100vw;
-  background-image: url("./images/beach_Moment.jpg");
+  background-image: url("../images/beach_Moment.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .main .time {
   width: 50%;
   height: 100%;
@@ -20,7 +19,6 @@
   justify-content: space-evenly;
   align-items: center;
 }
-
 .main .time .time__btn {
   width: 230px;
   height: 70px;
@@ -31,13 +29,11 @@
   font-size: 20px;
   transition: 0.2s;
 }
-
 .main .time .time__btn:hover {
   background-color: white;
   color: black;
   cursor: pointer;
 }
-
 .main .counter-section {
   width: 50%;
   height: 100%;
@@ -46,16 +42,15 @@
   justify-content: center;
   align-items: center;
 }
-
 .main .counter-section .counter-section--circle {
   position: absolute;
 }
-
-.main .counter-section .counter-section--circle .counter-section--circle__svg circle {
-  stroke: white;
+.main .counter-section .counter-section--circle .counter-section--circle__svg {
   width: 300px;
 }
-
+.main .counter-section .counter-section--circle .counter-section--circle__svg circle {
+  stroke: white;
+}
 .main .counter-section .counter-section__controls {
   position: absolute;
   display: flex;
@@ -63,30 +58,69 @@
   align-items: center;
   cursor: pointer;
 }
-
 .main .counter-section .counter-section__controls:active .counter-section__controls--play svg path {
   fill: lightgray;
 }
-
 .main .counter-section .counter-section__controls:active .counter-section__controls--pause svg rect {
   fill: lightgray;
 }
-
 .main .counter-section .counter-section__controls .counter-section__controls--play {
   position: absolute;
 }
-
 .main .counter-section .counter-section__controls .counter-section__controls--pause {
   position: absolute;
 }
-
 .main .counter-section .counter-section__countdown-numbers {
   position: relative;
   top: 30%;
   color: white;
   font-size: 48px;
 }
-
 .main .hidden {
   visibility: hidden;
 }
+
+@media screen and (max-width: 767px) {
+  .main {
+    flex-direction: column-reverse;
+  }
+  .main .time {
+    width: 100%;
+    height: 30%;
+    flex-direction: row;
+  }
+  .main .time .time__btn {
+    width: 100px;
+    height: 55px;
+    font-size: 16px;
+  }
+  .main .counter-section {
+    width: 100%;
+    height: 70%;
+  }
+  .main .counter-section .counter-section--circle .counter-section--circle__svg circle {
+    stroke: white;
+  }
+  .main .counter-section .counter-section__controls {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .main .counter-section .counter-section__controls:active .counter-section__controls--play svg path {
+    fill: lightgray;
+  }
+  .main .counter-section .counter-section__controls:active .counter-section__controls--pause svg rect {
+    fill: lightgray;
+  }
+  .main .counter-section .counter-section__controls .counter-section__controls--play {
+    position: absolute;
+  }
+  .main .counter-section .counter-section__controls .counter-section__controls--pause {
+    position: absolute;
+  }
+  .main .counter-section .counter-section__countdown-numbers {
+    top: 45%;
+  }
+}/*# sourceMappingURL=style.css.map */

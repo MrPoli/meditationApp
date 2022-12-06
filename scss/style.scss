@@ -84,54 +84,54 @@ $primary-color: white;
   }
 }
 
-@media screen and (max-width: 767px) {
-  .main {
-    flex-direction: column-reverse;
-    .time {
-      width: 100%;
-      height: 30%;
-      flex-direction: row;
+// @media screen and (max-width: 767px) {
+//   .main {
+//     flex-direction: column-reverse;
+//     .time {
+//       width: 100%;
+//       height: 30%;
+//       flex-direction: row;
 
-      .time__btn {
-        width: 100px;
-        height: 55px;
-        font-size: 16px;
-      }
-    }
-    .counter-section {
-      width: 100%;
-      height: 70%;
-      .counter-section--circle {
-        .counter-section--circle__svg {
-          circle {
-            stroke: white;
-          }
-        }
-      }
-      .counter-section__controls {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        &:active {
-          .counter-section__controls--play svg path {
-            fill: lightgray;
-          }
-          .counter-section__controls--pause svg rect {
-            fill: lightgray;
-          }
-        }
-        .counter-section__controls--play {
-          position: absolute;
-        }
-        .counter-section__controls--pause {
-          position: absolute;
-        }
-      }
-      .counter-section__countdown-numbers {
-        top: 45%;
-      }
-    }
-  }
-}
+//       .time__btn {
+//         width: 100px;
+//         height: 55px;
+//         font-size: 16px;
+//       }
+//     }
+//     .counter-section {
+//       width: 100%;
+//       height: 70%;
+//       .counter-section--circle {
+//         .counter-section--circle__svg {
+//           circle {
+//             stroke: white;
+//           }
+//         }
+//       }
+//       .counter-section__controls {
+//         position: absolute;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         cursor: pointer;
+//         &:active {
+//           .counter-section__controls--play svg path {
+//             fill: lightgray;
+//           }
+//           .counter-section__controls--pause svg rect {
+//             fill: lightgray;
+//           }
+//         }
+//         .counter-section__controls--play {
+//           position: absolute;
+//         }
+//         .counter-section__controls--pause {
+//           position: absolute;
+//         }
+//       }
+//       .counter-section__countdown-numbers {
+//         top: 45%;
+//       }
+//     }
+//   }
+// }

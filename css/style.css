@@ -20,13 +20,13 @@
   align-items: center;
 }
 .main .time .time__btn {
-  width: 230px;
-  height: 70px;
+  width: 35%;
+  height: 10%;
   border: 2px solid white;
   border-radius: 5px;
   background-color: transparent;
   color: white;
-  font-size: 20px;
+  font-size: 28px;
   transition: 0.2s;
 }
 .main .time .time__btn:hover {
@@ -46,7 +46,7 @@
   position: absolute;
 }
 .main .counter-section .counter-section--circle .counter-section--circle__svg {
-  width: 300px;
+  width: 350px;
 }
 .main .counter-section .counter-section--circle .counter-section--circle__svg circle {
   stroke: white;

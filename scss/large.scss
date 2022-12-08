@@ -1,0 +1,33 @@
+.main {
+  flex-direction: column-reverse;
+  min-height: 520px;
+  min-width: 320px;
+  .time {
+    width: 100%;
+    height: 30%;
+    min-height: 150px;
+    min-width: 320px;
+    flex-direction: row;
+    .time__btn {
+      width: 30%;
+      height: 40%;
+      font-size: 38px;
+    }
+  }
+  .counter-section {
+    width: 100%;
+    height: 70%;
+    min-height: 400px;
+    min-width: 320px;
+    .counter-section--circle {
+      .counter-section--circle__svg {
+        width: 400px;
+        height: 400px;
+      }
+    }
+    .counter-section__countdown-numbers {
+      top: 40%;
+      font-size: 100px;
+    }
+  }
+}

@@ -12,6 +12,7 @@ $primary-color: white;
   background-image: url("../images/beach_Moment.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
   .time {
     width: 50%;
     height: 100%;
@@ -20,13 +21,13 @@ $primary-color: white;
     justify-content: space-evenly;
     align-items: center;
     .time__btn {
-      width: 230px;
-      height: 70px;
+      width: 35%;
+      height: 10%;
       border: 2px solid $primary-color;
       border-radius: 5px;
       background-color: transparent;
       color: $primary-color;
-      font-size: 20px;
+      font-size: 28px;
       transition: 0.2s;
       &:hover {
         background-color: $primary-color;
@@ -45,7 +46,7 @@ $primary-color: white;
     .counter-section--circle {
       position: absolute;
       .counter-section--circle__svg {
-        width: 300px;
+        width: 350px;
         circle {
           stroke: white;
         }
@@ -83,55 +84,3 @@ $primary-color: white;
     visibility: hidden;
   }
 }
-
-// @media screen and (max-width: 767px) {
-//   .main {
-//     flex-direction: column-reverse;
-//     .time {
-//       width: 100%;
-//       height: 30%;
-//       flex-direction: row;
-
-//       .time__btn {
-//         width: 100px;
-//         height: 55px;
-//         font-size: 16px;
-//       }
-//     }
-//     .counter-section {
-//       width: 100%;
-//       height: 70%;
-//       .counter-section--circle {
-//         .counter-section--circle__svg {
-//           circle {
-//             stroke: white;
-//           }
-//         }
-//       }
-//       .counter-section__controls {
-//         position: absolute;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         cursor: pointer;
-//         &:active {
-//           .counter-section__controls--play svg path {
-//             fill: lightgray;
-//           }
-//           .counter-section__controls--pause svg rect {
-//             fill: lightgray;
-//           }
-//         }
-//         .counter-section__controls--play {
-//           position: absolute;
-//         }
-//         .counter-section__controls--pause {
-//           position: absolute;
-//         }
-//       }
-//       .counter-section__countdown-numbers {
-//         top: 45%;
-//       }
-//     }
-//   }
-// }

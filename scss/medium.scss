@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  min-height: 340px;
+  .time {
+    justify-content: space-around;
+  }
+  .counter-section {
+    .counter-section--circle {
+      margin-bottom: 5px;
+      .counter-section--circle__svg {
+        width: 190px;
+        height: 190px;
+      }
+    }
+    .counter-section__countdown-numbers {
+      top: 35%;
+    }
+  }
+}

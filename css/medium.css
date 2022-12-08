@@ -1,13 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .main {
   min-height: 340px;
 }
 .main .time {
   justify-content: space-around;
+}
+.main .time .time__btn {
+  font-size: 20px;
 }
 .main .counter-section .counter-section--circle {
   margin-bottom: 5px;

@@ -15,23 +15,34 @@ let countdownNumbers = document.querySelector(
 let countdownTime = 0;
 let countdownInterval;
 
-function countdownIntervalStart() {
+let countdownIntervalStart = () => {
   countdownTime == 0
     ? clearInterval(countdownInterval)
     : (countdownInterval = setInterval(countdown, 1000));
-}
+};
+
+let countdownIntervalReset = () => {
+  countdownTime = parseInt(countdownNumbers.textContent) * 60;
+  audio.pause();
+  audio.currentTime = 0;
+  clearInterval(countdownInterval);
+  counterSectionPlay.classList.remove("hidden");
+  counterSectionPause.classList.add("hidden");
+  return countdownTime;
+};
 
 twoMinutesBtn.addEventListener("click", () => {
   countdownNumbers.innerHTML = "2:00";
-  countdownTime = parseInt(countdownNumbers.textContent) * 60;
+  countdownIntervalReset();
 });
+
 fiveMinutesBtn.addEventListener("click", () => {
   countdownNumbers.innerHTML = "5:00";
-  countdownTime = parseInt(countdownNumbers.textContent) * 60;
+  countdownIntervalReset();
 });
 tenMinutesBtn.addEventListener("click", () => {
   countdownNumbers.innerHTML = "10:00";
-  countdownTime = parseInt(countdownNumbers.textContent) * 60;
+  countdownIntervalReset();
 });
 
 counterSectionPlay.addEventListener("click", () => {

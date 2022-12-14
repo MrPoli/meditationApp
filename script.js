@@ -12,13 +12,33 @@ const tenMinutesBtn = document.querySelector(".time__btn--ten-minutes");
 let countdownNumbers = document.querySelector(
   ".counter-section__countdown-numbers"
 );
+const circle = document.querySelector("#circle");
+const backgroundCircle = document.querySelector(
+  ".counter-section--circle__svg circle"
+);
 let countdownTime = 0;
 let countdownInterval;
+
+let circleAnimationStart = () => {
+  if (countdownTime > 0) {
+    circle.style.animation = "countdownCircleTimer linear forwards";
+    circle.style.animationDuration = countdownTime + "s";
+  }
+};
+
+let circleAnimationPause = () => {
+  circle.style.animationPlayState = "paused";
+};
+
+let circleAnimationRemove = () => {
+  circle.style.animation = "";
+  circle.style.animationDuration = "";
+};
 
 let countdownIntervalStart = () => {
   countdownTime == 0
     ? clearInterval(countdownInterval)
-    : (countdownInterval = setInterval(countdown, 1000));
+    : (countdownInterval = setInterval(countdown, 100));
 };
 
 let countdownIntervalReset = () => {
@@ -32,40 +52,53 @@ let countdownIntervalReset = () => {
 };
 
 twoMinutesBtn.addEventListener("click", () => {
+  circleAnimationRemove();
   countdownNumbers.innerHTML = "2:00";
   countdownIntervalReset();
 });
 
 fiveMinutesBtn.addEventListener("click", () => {
+  circleAnimationRemove();
   countdownNumbers.innerHTML = "5:00";
   countdownIntervalReset();
 });
 tenMinutesBtn.addEventListener("click", () => {
+  circleAnimationRemove();
   countdownNumbers.innerHTML = "10:00";
   countdownIntervalReset();
 });
 
 counterSectionPlay.addEventListener("click", () => {
-  countdownTime == 0 ? audio.pause() : audio.play();
-  if (audio.played) {
+  // countdownTime == 0 ? audio.pause() : audio.play();
+  if (countdownTime > 0) {
+    audio.play();
     counterSectionPlay.classList.toggle("hidden");
     counterSectionPause.classList.toggle("hidden");
+  } else {
+    audio.pause();
   }
   countdownIntervalStart();
+  circleAnimationStart();
 });
 
 counterSectionPause.addEventListener("click", () => {
   audio.pause();
   counterSectionPlay.classList.toggle("hidden");
   counterSectionPause.classList.toggle("hidden");
+  circleAnimationPause();
   clearInterval(countdownInterval);
 });
 
 let countdown = () => {
-  const minutes = Math.floor((countdownTime - 1) / 60);
-  let seconds = (countdownTime - 1) % 60;
+  const minutes = Math.floor(countdownTime / 60);
+  let seconds = Math.floor(countdownTime % 60);
   seconds = seconds < 10 ? "0" + seconds : seconds;
   countdownNumbers.innerHTML = `${minutes}:${seconds}`;
-  countdownTime--;
+  countdownTime -= 0.1;
   console.log(countdownTime);
+  if (countdownTime <= 0) {
+    clearInterval(countdownInterval);
+    audio.pause();
+    audio.currentTime = 0;
+  }
 };

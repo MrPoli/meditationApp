@@ -69,13 +69,13 @@ tenMinutesBtn.addEventListener("click", () => {
 });
 
 counterSectionPlay.addEventListener("click", () => {
-  // countdownTime == 0 ? audio.pause() : audio.play();
   if (countdownTime > 0) {
     audio.play();
     counterSectionPlay.classList.toggle("hidden");
     counterSectionPause.classList.toggle("hidden");
   } else {
     audio.pause();
+    alert("Choose meditation time!");
   }
   countdownIntervalStart();
   circleAnimationStart();
@@ -95,7 +95,6 @@ let countdown = () => {
   seconds = seconds < 10 ? "0" + seconds : seconds;
   countdownNumbers.innerHTML = `${minutes}:${seconds}`;
   countdownTime -= 0.1;
-  console.log(countdownTime);
   if (countdownTime <= 0) {
     clearInterval(countdownInterval);
     audio.pause();

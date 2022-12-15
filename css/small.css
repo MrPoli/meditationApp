@@ -1,13 +1,12 @@
 .main {
   flex-direction: column-reverse;
   min-height: 520px;
-  min-width: 320px;
+  min-width: 190px;
 }
 .main .time {
   width: 100%;
   height: 30%;
   min-height: 150px;
-  min-width: 320px;
   flex-direction: row;
 }
 .main .time .time__btn {
@@ -19,7 +18,6 @@
   width: 100%;
   height: 70%;
   min-height: 400px;
-  min-width: 300px;
 }
 .main .counter-section .counter-section--circle__svg {
   width: 190px;

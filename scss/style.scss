@@ -48,7 +48,6 @@ $primary-color: white;
     .counter-section--circle {
       position: absolute;
       .counter-section--circle__svg {
-        // width: 350px;
         transform: rotateY(-180deg) rotateZ(-90deg);
         circle {
           stroke-dasharray: 1359.62;

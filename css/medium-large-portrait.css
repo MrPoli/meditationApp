@@ -7,7 +7,6 @@
   width: 100%;
   height: 30%;
   min-height: 150px;
-  min-width: 320px;
   flex-direction: row;
 }
 .main .time .time__btn {
@@ -21,11 +20,7 @@
   min-height: 400px;
   min-width: 320px;
 }
-.main .counter-section .counter-section--circle .counter-section--circle__svg {
-  width: 400px;
-  height: 400px;
-}
 .main .counter-section .counter-section__countdown-numbers {
   top: 40%;
   font-size: 100px;
-}/*# sourceMappingURL=large.css.map */
+} /*# sourceMappingURL=medium-large-portrait.css.map */

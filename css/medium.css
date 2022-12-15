@@ -5,6 +5,11 @@
   justify-content: space-around;
 }
 .main .time .time__btn {
+  height: 20%;
+  max-height: 100px;
+  min-width: 140px;
+  padding-left: 5px;
+  padding-right: 5px;
   font-size: 20px;
 }
 .main .counter-section .counter-section--circle {

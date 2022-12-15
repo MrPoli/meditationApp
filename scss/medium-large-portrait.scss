@@ -6,7 +6,6 @@
     width: 100%;
     height: 30%;
     min-height: 150px;
-    min-width: 320px;
     flex-direction: row;
     .time__btn {
       width: 30%;
@@ -21,8 +20,6 @@
     min-width: 320px;
     .counter-section--circle {
       .counter-section--circle__svg {
-        width: 400px;
-        height: 400px;
       }
     }
     .counter-section__countdown-numbers {
